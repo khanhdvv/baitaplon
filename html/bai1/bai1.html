@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+
+<html lang="vi"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>Chọn 3 quả bóng từ 8 quả bóng</title> 
+
+</head> 
+
+<body> 
+
+    <h1>Số cách chọn 3 quả bóng từ 8 quả bóng là:</h1> 
+
+    <p id="result"></p> 
+
+  
+
+    <script> 
+
+        function calculateCombinations() { 
+
+            var n = 8; 
+
+            var k = 3; 
+
+            var numCombinations = factorial(n) / (factorial(k) * factorial(n - k)); 
+
+            document.getElementById("result").innerHTML = numCombinations; 
+
+        } 
+
+  
+
+        function factorial(n) { 
+
+            if (n === 0) { 
+
+                return 1; 
+
+            } else { 
+
+                return n * factorial(n - 1); 
+
+            } 
+
+        } 
+
+  
+
+        calculateCombinations(); 
+
+    </script> 
+
+</body> 
+
+</html> 

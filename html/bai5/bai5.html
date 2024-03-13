@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+
+<html lang="vi"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>Thuật toán DFS</title> 
+
+</head> 
+
+<body> 
+
+    <h1>Thuật toán DFS</h1> 
+
+    <p>Kết quả duyệt DFS:</p> 
+
+    <p id="result"></p> 
+
+  
+
+    <script> 
+
+        function dfs(adjList, visited, u) { 
+
+            visited[u] = true; 
+
+            document.getElementById("result").innerHTML += u + " "; 
+
+  
+
+            for (let v of adjList[u]) { 
+
+                if (!visited[v]) { 
+
+                    dfs(adjList, visited, v); 
+
+                } 
+
+            } 
+
+        } 
+
+  
+
+        const adjList = [ 
+
+            [1, 2], 
+
+            [3, 4], 
+
+            [4], 
+
+            [], 
+
+            [2], 
+
+        ]; 
+
+        const visited = new Array(5).fill(false); 
+
+  
+
+        dfs(adjList, visited, 0); 
+
+    </script> 
+
+</body> 
+
+</html> 
